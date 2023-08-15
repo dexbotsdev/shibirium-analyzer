@@ -8,6 +8,9 @@ import email from 'src/store/apps/email'
 import invoice from 'src/store/apps/invoice'
 import calendar from 'src/store/apps/calendar'
 import permissions from 'src/store/apps/permissions'
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export const store = configureStore({
   reducer: {

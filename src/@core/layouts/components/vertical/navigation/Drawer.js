@@ -64,11 +64,7 @@ const Drawer = props => {
           color: `rgba(${theme.palette.customColors.light}, 0.87)`
         }
       }
-    } else return {
-      '& .MuiTypography-root, & .MuiSvgIcon-root': {
-        color: `#FFFFFF`
-      }
-    }
+    } else return {}
   }
 
   const drawerBgColor = () => {
@@ -82,7 +78,7 @@ const Drawer = props => {
       }
     } else {
       return {
-        background: 'linear-gradient(180deg, rgba(247, 238, 238, 0.25) 0%, rgba(38, 38, 38, 0.25) 100%)'
+        backgroundColor: theme.palette.background.default
       }
     }
   }

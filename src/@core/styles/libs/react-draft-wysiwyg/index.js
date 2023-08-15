@@ -1,5 +1,8 @@
 // ** MUI imports
 import { styled } from '@mui/material/styles'
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 export const EditorWrapper = styled('div')(({ theme }) => ({
   '& .rdw-editor-wrapper': {

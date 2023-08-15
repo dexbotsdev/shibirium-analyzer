@@ -15,5 +15,8 @@ import './apps/permissions'
 import './pages/knowledge-base'
 import './server-side-menu/vertical'
 import './server-side-menu/horizontal'
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 mock.onAny().passThrough()

@@ -80,19 +80,19 @@ const WeeklyOverview = (props) => {
     }
   }
   const Item = (props) => {
-    let colorTxt='white';
+    let colorTxt='cyan';
     if(props.value === 'FAILED' || props.value === 'UnVerified' || Number(props.value)<0)
     colorTxt='red'
   
     return (<Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', mt: 3 }}>
     <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
-      <Typography variant='body2' sx={{ color: 'white', fontWeight: 'bolder' }}>
+      <Typography variant='body2' sx={{ color: 'common.grey', fontWeight: 'bolder' }}>
         {props.tag}
       </Typography>
     </Box>
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', mr: 3.5 }}>
-        <Typography variant='button' sx={{ color: 'white', fontWeight: 'bolder' }}>
+        <Typography variant='button' sx={{ color: colorTxt, fontWeight: 'bolder' }}>
           {props.value}
         </Typography>
       </Box>
@@ -100,7 +100,7 @@ const WeeklyOverview = (props) => {
   </Box>)};
   return (
    <> 
-  <Card sx={{ position: 'relative', background:'linear-gradient(180deg, rgba(247, 238, 238, 0.25) 0%, rgba(38, 38, 38, 0.25) 100%)' }}>
+  <Card>
       <CardHeader
         title='Token Information'
         titleTypographyProps={{
@@ -121,7 +121,7 @@ const WeeklyOverview = (props) => {
       </CardContent>
 
     </Card>
-    <Card  sx={{ mt:4 , position: 'relative', background:'linear-gradient(180deg, rgba(247, 238, 238, 0.25) 0%, rgba(38, 38, 38, 0.25) 100%)' }}>
+    <Card  sx={{ mt:4 }}>
       <CardHeader
         title='Fully Diluted Value ($)'
         titleTypographyProps={{

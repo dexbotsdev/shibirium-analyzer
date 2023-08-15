@@ -1,5 +1,8 @@
 // ** Mock Adapter
 import mock from 'src/@fake-db/mock'
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const searchData = [
   {
